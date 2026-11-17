@@ -1,0 +1,258 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تولدت مبارک فاطمه 🎀</title>
+
+<style>
+*{box-sizing:border-box}
+body{
+ margin:0;
+ font-family:Tahoma,sans-serif;
+ background:#fff1f6;
+ color:#70465b;
+ text-align:center;
+ overflow-x:hidden;
+}
+html{scroll-behavior:smooth}
+header{
+ min-height:90vh;
+ display:flex;
+ flex-direction:column;
+ justify-content:center;
+ align-items:center;
+ padding:25px;
+ background:linear-gradient(145deg,#ffe0ed,#fff7fa,#f9d5e5);
+}
+h1{
+ color:#cf6694;
+ font-size:36px;
+ line-height:1.8;
+}
+h2{color:#cf6694}
+p{line-height:2.2}
+button{
+ background:#d879a3;
+ color:white;
+ border:0;
+ padding:14px 25px;
+ border-radius:30px;
+ font-size:15px;
+ cursor:pointer;
+ margin:8px;
+}
+button:hover{background:#bd5685}
+.emoji{font-size:55px}
+section{padding:55px 15px}
+.card{
+ max-width:550px;
+ margin:20px auto;
+ background:white;
+ border-radius:25px;
+ padding:25px;
+ box-shadow:0 8px 30px #d98aaf25;
+}
+.envelope{
+ font-size:85px;
+ animation:bounce 2s infinite;
+}
+@keyframes bounce{
+ 50%{transform:translateY(-12px)}
+}
+.hidden{display:none!important}
+.gallery{
+ display:grid;
+ grid-template-columns:repeat(2,minmax(0,1fr));
+ gap:12px;
+ max-width:650px;
+ margin:auto;
+}
+.gallery img{
+ width:100%;
+ height:210px;
+ object-fit:cover;
+ border-radius:18px;
+ border:5px solid white;
+ box-shadow:0 5px 15px #d98aaf30;
+}
+.gallery img:first-child{
+ grid-column:span 2;
+ height:280px;
+}
+.message{
+ background:#fff3f8;
+ border-radius:18px;
+ padding:17px;
+ margin:15px 0;
+}
+footer{
+ padding:40px 15px;
+ background:#f9dce9;
+}
+.heart{
+ position:fixed;
+ bottom:-30px;
+ z-index:10;
+ pointer-events:none;
+ animation:float 7s linear forwards;
+}
+@keyframes float{
+ to{transform:translateY(-110vh) rotate(360deg);opacity:0}
+}
+#letter{
+ line-height:2.5;
+ text-align:justify;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+ <div class="emoji">🎀🌸🦋</div>
+ <h1>تولدت مبارک فاطمه</h1>
+ <p>امروز روز توئه؛ روز یکی از خاص‌ترین آدم‌های زندگی من ❤️</p>
+ <div class="envelope">💌</div>
+ <p>یک سورپرایز کوچیک برات دارم...</p>
+ <button onclick="openGift()">باز کردن سورپرایز</button>
+</header>
+
+<div id="main" class="hidden">
+
+<section>
+ <div class="card">
+  <h2>به دنیای کوچیک تو خوش اومدی 🌷</h2>
+  <p>
+  فاطمه جان، امروز یه روز معمولی نیست.
+  امروز روزیه که دنیا یکی از آدم‌های دوست‌داشتنی خودش رو به دست آورده.
+  </p>
+ </div>
+</section>
+
+<section>
+ <h2>💌 یک نامه از طرف من</h2>
+ <div class="card" id="letter">
+ فاطمه عزیزم...
+
+ شاید خواهر واقعی من نباشی، اما بعضی آدم‌ها
+ بدون داشتن نسبت خانوادگی، تبدیل به یکی از
+ عزیزترین آدم‌های زندگی آدم می‌شن.
+
+ می‌خوام بدونی که بودنت برام ارزشمنده.
+ امیدوارم همیشه دلت خوش باشه، به آرزوهات برسی
+ و هیچ‌وقت دلیل خندیدنت رو گم نکنی.
+
+ امیدوارم سال جدید زندگیت پر از اتفاق‌های قشنگ،
+ آدم‌های خوب و لحظه‌هایی باشه که هیچ‌وقت
+ فراموششون نکنی.
+
+ ممنونم که هستی و امیدوارم همیشه خوشحال باشی.
+
+ <h2 style="text-align:center">تولدت مبارک فاطمه ❤️</h2>
+ </div>
+</section>
+
+<section>
+ <h2>📸 قاب خاطرات</h2>
+ <p>چند تصویر برای ثبت یک روز قشنگ</p>
+ <div class="gallery">
+  <img src="photo1.jpg" alt="خاطره اول">
+  <img src="photo2.jpg" alt="خاطره دوم">
+  <img src="photo3.png" alt="خاطره سوم">
+  <img src="photo4.jpg" alt="خاطره چهارم">
+  <img src="photo5.jpg" alt="خاطره پنجم">
+ </div>
+</section>
+
+<section>
+ <h2>🎁 چند هدیه مخفی</h2>
+
+ <div class="card">
+  <button onclick="reveal('a')">هدیه اول 🌸</button>
+  <p id="a" class="hidden message">
+  آرزو می‌کنم هر روزت قشنگ‌تر از روز قبل باشه.
+  </p>
+
+  <button onclick="reveal('b')">هدیه دوم 💗</button>
+  <p id="b" class="hidden message">
+  هیچ‌وقت فراموش نکن که چقدر ارزشمند و دوست‌داشتنی هستی.
+  </p>
+
+  <button onclick="reveal('c')">هدیه سوم 🦋</button>
+  <p id="c" class="hidden message">
+  امیدوارم تمام رویاهای قشنگت به واقعیت تبدیل بشن.
+  </p>
+
+  <button onclick="reveal('d')">هدیه چهارم ✨</button>
+  <p id="d" class="hidden message">
+  امیدوارم همیشه اطرافت پر از آدم‌های صادق و مهربون باشه.
+  </p>
+ </div>
+</section>
+
+<section>
+ <div class="card">
+  <div class="emoji">🎂</div>
+  <h2>حالا وقت آرزو کردنه!</h2>
+  <p>چشماتو ببند و یه آرزوی قشنگ بکن.</p>
+  <button onclick="celebrate()">فوت کردن شمع‌ها 🕯️</button>
+  <h2 id="wish" class="hidden">تولدت مبارک فاطمه! 🎉❤️</h2>
+ </div>
+</section>
+
+<section>
+ <div class="card">
+  <h2>یک حرف آخر...</h2>
+  <p>
+  شاید نتونم تمام خوشحالی دنیا رو بهت هدیه بدم،
+  ولی امیدوارم این سورپرایز کوچیک لبخند روی لبت بیاره.
+  </p>
+  <button onclick="reveal('final')">باز کردن آخرین پیام 🎀</button>
+  <p id="final" class="hidden message">
+  فاطمه، امیدوارم امسال بهترین سال زندگیت باشه.
+  همیشه بخند و همیشه بدرخش. ❤️
+  </p>
+ </div>
+</section>
+
+<footer>
+ <h2>Happy Birthday Fatemeh 🎀</h2>
+ <p>با کلی ذوق، برای روز خاص تو ❤️</p>
+</footer>
+
+</div>
+
+<script>
+function openGift(){
+ document.getElementById('main').classList.remove('hidden');
+ document.getElementById('main').scrollIntoView({behavior:'smooth'});
+ celebrateHearts();
+}
+
+function reveal(id){
+ document.getElementById(id).classList.toggle('hidden');
+}
+
+function celebrate(){
+ document.getElementById('wish').classList.remove('hidden');
+ celebrateHearts();
+}
+
+function celebrateHearts(){
+ for(let i=0;i<35;i++){
+  let h=document.createElement('div');
+  h.className='heart';
+  h.innerText=['💗','🌸','🎀','✨','🦋'][Math.floor(Math.random()*5)];
+  h.style.left=Math.random()*100+'%';
+  h.style.fontSize=(18+Math.random()*20)+'px';
+  h.style.animationDelay=Math.random()*3+'s';
+  document.body.appendChild(h);
+  setTimeout(()=>h.remove(),8000);
+ }
+}
+</script>
+
+</body>
+</html>
